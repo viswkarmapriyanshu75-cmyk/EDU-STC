@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Genius - Robotix Education Hub</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1 class="logo-heading">
+          <img src="images/logof.jpg" alt="Little Genius Robotix" class="logo-img">
+        </h1>
+      </div>
+      <nav class="nav-container">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#create" class="nav-link">Create Now</a>
+        <a href="#contact" class="nav-link contact-link">Contact</a>
+        <div class="dropdown-menu">
+          <a href="#plugic" class="nav-link contact-link dropdown-toggle">PLUGIC ▼</a>
+          <div class="dropdown-content">
+            <a href="style/PLOGIC.html">What is it?</a>
+            <a href="style/PLOGIC.html#start">Get Started</a>
+            <a href="style/PLOGIC.html#learn">Learn</a>
+            <a href="style/PLOGIC.html#contrib">Contribute</a>
+            <a href="style/PLOGIC.html#merch">Merch</a>
+            <a href="style/PLOGIC.html#about">About</a>
+            <a href="style/PLOGIC.html#blog">Blog</a>
+            <a href="style/PLOGIC.html#wiki">Wiki</a>
+            <a href="style/PLOGIC.html#download">Download</a>
+            <a href="style/PLOGIC.html#run"><b>Run</b></a>
+          </div>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ===========================
+       HOME SECTION (HERO)
+       =========================== -->
+  <section class="hero-section" id="home">
+    <!-- Background static image and blur overlay -->
+    <div class="hero-bg-video">
+      <img src="background.png" alt="Hero background image showcasing robotics education and children learning STEM"
+        style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+      <div class="video-blur-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Welcome to STC Creative Club</h1>
+          <p class="hero-subtitle">Empowering the Next Generation Through Robotics & STEM Education</p>
+          <p class="hero-description">
+            Join us on an exciting journey where children ages 4-16 discover the power of robotics, coding, and
+            innovation through hands-on learning and creative play.
+          </p>
+          <div class="hero-buttons">
+            <a href="#create" class="cta-button hero-btn">Get Started Now</a>
+            <a href="#about" class="cta-button hero-btn secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-visual">
+            <div class="floating-robot">🤖</div>
+            <div class="floating-code">💻</div>
+            <div class="floating-spark">🕹️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider"></div>
+  </section>
+
+  <!-- ===========================
+       QUICK STATS SECTION
+       =========================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>500+</h3>
+          <p>Students Trained</p>
+        </div>
+        <div class="stat-card">
+          <h3>15+</h3>
+          <p>Expert Instructors</p>
+        </div>
+        <div class="stat-card">
+          <h3>50+</h3>
+          <p>Robotics Kits</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Satisfaction Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       ABOUT SECTION
+       =========================== -->
+  <section class="content-section" id="about">
+    <div class="container">
+      <h2>STC Creative Club- Robotix Education Hub</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="icon">🤖</div>
+          <h3>What We Do</h3>
+          <p>
+            Little Genius specializes in robotics and technology education for children ages 4-16. We combine hands-on
+            learning with creative play to inspire the next generation of engineers, programmers, and innovators.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>
+            To empower children through interactive robotics, coding, and STEM education in a safe, fun, and inclusive
+            environment that fosters curiosity, problem-solving, and creativity.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="icon">⭐</div>
+          <h3>Why Choose Us</h3>
+          <p>
+            Expert instructors, certified safety standards, modern robotics kits, personalized learning paths, and
+            proven success in building foundational tech skills for children.
+          </p>
+        </div>
+      </div>
+      <h3>Key Features</h3>
+      <ul class="features-list">
+        <li>✅ <strong>Age-Appropriate Programs:</strong> Structured robotics curriculum for different age groups</li>
+        <li>✅ <strong>Hands-On Learning:</strong> Interactive projects with real robotics kits and components</li>
+        <li>✅ <strong>Certified Instructors:</strong> Experienced educators passionate about technology</li>
+        <li>✅ <strong>Safe Environment:</strong> Child-friendly spaces with safety-first protocols</li>
+        <li>✅ <strong>Competition Ready:</strong> Prepare for robotics competitions and tech events</li>
+        <li>✅ <strong>Flexible Scheduling:</strong> Weekend classes, summer camps, and workshops</li>
+      </ul>
+      <h3>Our Robotics Technology Stack</h3>
+      <div class="tech-stack">
+        <span class="tech-badge">Arduino</span>
+        <span class="tech-badge">Raspberry Pi</span>
+        <span class="tech-badge">LEGO Robotics</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">C++</span>
+        <span class="tech-badge">IoT Sensors</span>
+        <span class="tech-badge">AI/Machine Learning</span>
+        <span class="tech-badge">Mechanical Engineering</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       PRODUCTS SECTION
+       =========================== -->
+  <section class="content-section products-section" id="products" aria-labelledby="products-title">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="products-title">Robotix Products &amp; Kits</h2>
+        <p class="section-intro">Explore our carefully curated robotics kits designed to inspire learning and creativity
+          for children of all skill levels.</p>
+      </header>
+      <!-- Product Images Showcase -->
+      <section class="video-section" aria-labelledby="video-title">
+        <h3 id="video-title" class="section-title-with-video">
+          <span class="icon" aria-hidden="true">📷</span>
+          See Our Products in Action
+        </h3>
+        <div class="video-grid" role="list">
+          <article class="video-card" role="listitem">
+            <figure class="video-container">
+              <img
+                src="data:image/webp;base64,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"
+                alt="Video thumbnail: Children assembling a beginner robotics kit step-by-step"
+                class="video-placeholder" loading="lazy">
+              <figcaption class="sr-only">Beginner Kit Assembly Video</figcaption>
+            </figure>
+            <div class="video-card-content">
+              <h4>Beginner Kit Assembly</h4>
+              <p>Watch how easy it is to assemble our beginner robotics kit.</p>
+            </div>
+          </article>
+          <article class="video-card" role="listitem">
+            <figure class="video-container">
+              <img
+                src="data:image/webp;base64,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"
+                alt="Video thumbnail: Advanced AI Robot" class="video-placeholder" loading="lazy">
+              <figcaption class="sr-only">Advanced AI Robot Video</figcaption>
+            </figure>
+            <div class="video-card-content">
+              <h4>Advanced AI Robot</h4>
+              <p>Our advanced kit with AI capabilities in action.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="products-grid" aria-labelledby="products-grid-title" role="list">
+        <h3 id="products-grid-title" class="sr-only">Our Robotics Products</h3>
+        <!-- Product 1: Beginner -->
+        <article class="product-card" role="listitem" data-product-id="beginner-kit">
+          <figure class="product-image-container">
+            <img src="https://m.media-amazon.com/images/I/81cq7IDhVvL.jpg"
+              alt="Beginner Robotics Kit: Colorful blocks and sensors for easy assembly" class="product-image"
+              loading="lazy">
+            <div class="product-badge" aria-label="Level: Beginner">Beginner</div>
+            <div class="product-overlay">
+              <p>Ages 5-8</p>
+            </div>
+          </figure>
+          <div class="product-content">
+            <div class="product-icon" aria-hidden="true">🟢</div>
+            <h3>Beginner Robotics Kit</h3>
+            <p class="price">₹7,099</p>
+            <ul class="product-features" role="list">
+              <li role="listitem">✓ Simple robotics assembly</li>
+              <li role="listitem">✓ Basic programming concepts</li>
+              <li role="listitem">✓ LED &amp; sensor integration</li>
+              <li role="listitem">✓ Perfect for ages 5-8</li>
+              <li role="listitem">✓ Includes 30+ components</li>
+            </ul>
+            <div class="product-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="reviews">(245 reviews)</span>
+            </div>
+            <button class="cta-button btn-learn-more" data-product="beginner-kit"
+              aria-label="Learn more about Beginner Robotics Kit">Learn More</button>
+          </div>
+        </article>
+        <!-- Product 2: Intermediate -->
+        <article class="product-card popular" role="listitem" data-product-id="intermediate-kit">
+          <figure class="product-image-container">
+            <img
+              src="https://robocraze.com/cdn/shop/products/RFIDKit_92001eaf-9c1d-4cef-bba8-ad35ea8f9e8c.png?v=1743773569"
+              alt="Intermediate Robotics Kit: Arduino board with motors and sensors" class="product-image"
+              loading="lazy">
+            <div class="product-badge" aria-label="Level: Popular">Popular</div>
+            <div class="product-overlay">
+              <p>Ages 8-12</p>
+            </div>
+          </figure>
+          <div class="product-content">
+            <div class="product-icon" aria-hidden="true">🟡</div>
+            <h3>Intermediate Robotics Kit</h3>
+            <p class="price">₹13,299</p>
+            <ul class="product-features" role="list">
+              <li role="listitem">✓ Arduino-based programming</li>
+              <li role="listitem">✓ Motor &amp; servo control</li>
+              <li role="listitem">✓ Sensor integration (IR, ultrasonic)</li>
+              <li role="listitem">✓ Perfect for ages 8-12</li>
+              <li role="listitem">✓ Includes 50+ components</li>
+            </ul>
+            <div class="product-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="reviews">(389 reviews)</span>
+            </div>
+            <button class="cta-button btn-learn-more" data-product="intermediate-kit"
+              aria-label="Learn more about Intermediate Robotics Kit">Learn More</button>
+          </div>
+        </article>
+        <!-- Product 3: Advanced -->
+        <article class="product-card" role="listitem" data-product-id="advanced-kit">
+          <figure class="product-image-container">
+            <img src="https://m.media-amazon.com/images/I/91xDYX4i2VL._SY450_.jpg"
+              alt="Advanced Robotics Kit: Complex circuit board with AI modules" class="product-image" loading="lazy">
+            <div class="product-badge" aria-label="Level: Advanced">Advanced</div>
+            <div class="product-overlay">
+              <p>Ages 12-16</p>
+            </div>
+          </figure>
+          <div class="product-content">
+            <div class="product-icon" aria-hidden="true">🔵</div>
+            <h3>Advanced Robotics Kit</h3>
+            <p class="price">₹22,168</p>
+            <ul class="product-features" role="list">
+              <li role="listitem">✓ Advanced coding (C++/Python)</li>
+              <li role="listitem">✓ AI &amp; Machine Learning basics</li>
+              <li role="listitem">✓ Multi-sensor arrays</li>
+              <li role="listitem">✓ Perfect for ages 12-16</li>
+              <li role="listitem">✓ Includes 100+ components</li>
+            </ul>
+            <div class="product-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="reviews">(156 reviews)</span>
+            </div>
+            <button class="cta-button btn-learn-more" data-product="advanced-kit"
+              aria-label="Learn more about Advanced Robotics Kit">Learn More</button>
+          </div>
+        </article>
+        <!-- Product 4: Competition -->
+        <article class="product-card" role="listitem" data-product-id="competition-kit">
+          <figure class="product-image-container">
+            <img
+              src="https://tse1.mm.bing.net/th/id/OIP.kBO0wdyU0B5O0FO-HYeDVAAAAA?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+              alt="Competition Robotics Kit: High-performance robot frame for contests" class="product-image"
+              loading="lazy">
+            <div class="product-badge premium" aria-label="Level: Premium">Premium</div>
+            <div class="product-overlay">
+              <p>Ages 13-16</p>
+            </div>
+          </figure>
+          <div class="product-content">
+            <div class="product-icon" aria-hidden="true">🟣</div>
+            <h3>Competition Robotics Kit</h3>
+            <p class="price">₹35,467</p>
+            <ul class="product-features" role="list">
+              <li role="listitem">✓ Competition-grade components</li>
+              <li role="listitem">✓ Advanced AI capabilities</li>
+              <li role="listitem">✓ IoT &amp; cloud connectivity</li>
+              <li role="listitem">✓ Perfect for ages 13-16</li>
+              <li role="listitem">✓ Includes 150+ components</li>
+            </ul>
+            <div class="product-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="reviews">(89 reviews)</span>
+            </div>
+            <button class="cta-button btn-learn-more" data-product="competition-kit"
+              aria-label="Learn more about Competition Robotics Kit">Learn More</button>
+          </div>
+        </article>
+        <!-- Product 5: Smart Home IoT -->
+        <article class="product-card" role="listitem" data-product-id="iot-kit">
+          <figure class="product-image-container">
+            <img src="https://m.media-amazon.com/images/I/81FpiyeAfNL._AC_SL1500_.jpg"
+              alt="Smart Home IoT Kit: Sensors and hubs for home automation projects" class="product-image"
+              loading="lazy">
+            <div class="product-badge" aria-label="Level: Featured">Featured</div>
+            <div class="product-overlay">
+              <p>Ages 10-15</p>
+            </div>
+          </figure>
+          <div class="product-content">
+            <div class="product-icon" aria-hidden="true">🟠</div>
+            <h3>Smart Home IoT Kit</h3>
+            <p class="price">₹17,732</p>
+            <ul class="product-features" role="list">
+              <li role="listitem">✓ IoT device control</li>
+              <li role="listitem">✓ Smart sensors &amp; actuators</li>
+              <li role="listitem">✓ Cloud integration</li>
+              <li role="listitem">✓ Ages 10-15</li>
+              <li role="listitem">✓ Real-world applications</li>
+            </ul>
+            <div class="product-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="reviews">(167 reviews)</span>
+            </div>
+            <button class="cta-button btn-learn-more" data-product="iot-kit"
+              aria-label="Learn more about Smart Home IoT Kit">Learn More</button>
+          </div>
+        </article>
+        <!-- Product 6: Drone -->
+        <article class="product-card" role="listitem" data-product-id="drone-kit">
+          <figure class="product-image-container">
+            <img
+              src="https://tse2.mm.bing.net/th/id/OIP.CCSDNp656HZT1kI1LavV7AHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+              alt="Drone &amp; Aerial Robotics Kit: Assembled drone with flight controller" class="product-image"
+              loading="lazy">
+            <div class="product-badge" aria-label="Level: Latest">Latest</div>
+            <div class="product-overlay">
+              <p>Ages 12-16</p>
+            </div>
+          </figure>
+          <div class="product-content">
+            <div class="product-icon" aria-hidden="true">🟤</div>
+            <h3>Drone &amp; Aerial Robotics Kit</h3>
+            <p class="price">₹26,605</p>
+            <ul class="product-features" role="list">
+              <li role="listitem">✓ Programmable drone assembly</li>
+              <li role="listitem">✓ Flight control systems</li>
+              <li role="listitem">✓ Camera integration</li>
+              <li role="listitem">✓ Ages 12-16</li>
+              <li role="listitem">✓ Beginner to advanced</li>
+            </ul>
+            <div class="product-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="reviews">(203 reviews)</span>
+            </div>
+            <button class="cta-button btn-learn-more" data-product="drone-kit"
+              aria-label="Learn more about Drone &amp; Aerial Robotics Kit">Learn More</button>
+          </div>
+        </article>
+      </section>
+      <section class="bundle-section" aria-labelledby="bundle-title">
+        <h3 id="bundle-title">📦 Special Bundle Offers</h3>
+        <div class="bundle-cards" role="list">
+          <article class="bundle-card" role="listitem">
+            <figure>
+              <img
+                src="https://tse1.mm.bing.net/th/id/OIP.Dzggk3rNfpXibhpGjrVzmwHaHq?w=989&amp;h=1024&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+                alt="Starter Bundle: Beginner and Intermediate kits combined for value" class="bundle-image"
+                loading="lazy">
+            </figure>
+            <h4>Starter Bundle</h4>
+            <p>Beginner + Intermediate Kit</p>
+            <p class="bundle-price">₹17,732 <span class="savings">(Save ₹2,660!)</span></p>
+            <button class="cta-button" aria-label="Buy Starter Bundle">Buy Bundle</button>
+          </article>
+          <article class="bundle-card" role="listitem">
+            <figure>
+              <img src="https://images.avishkaar.cc/products/robotics-pro-kit-er/main-carousel-image/rpk-3.webp"
+                alt="Professional Bundle: All advanced kits with extra materials for pros" class="bundle-image"
+                loading="lazy">
+            </figure>
+            <h4>Professional Bundle</h4>
+            <p>All 3 Advanced Kits + Materials</p>
+            <p class="bundle-price">₹53,198 <span class="savings">(Save ₹13,300!)</span></p>
+            <button class="cta-button" aria-label="Buy Professional Bundle">Buy Bundle</button>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===========================
+       COURSES SECTION
+       =========================== -->
+  <section class="content-section courses-section" id="courses" aria-labelledby="courses-title">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="courses-title">Robotix Training Courses</h2>
+        <p class="section-intro">Comprehensive, structured robotics and technology courses for children of all ages and
+          skill levels.</p>
+      </header>
+      <!-- Course Image Showcase -->
+      <section class="video-section" aria-labelledby="success-stories-title">
+        <p class="success-caption">Hear from our students and parents about their robotics learning journey.</p>
+      </section>
+      <section class="courses-grid" aria-labelledby="courses-grid-title" role="list">
+        <h3 id="courses-grid-title" class="sr-only">Our Robotics Courses</h3>
+        <!-- Course 1 -->
+        <article class="course-card" role="listitem" data-course-id="intro-robotics">
+          <div class="course-level" aria-label="Level: Beginner">Beginner</div>
+          <h3>🤖 Introduction to Robotics</h3>
+          <p class="course-duration">Duration: 8 weeks | 2 hours/week</p>
+          <p class="course-age">Age Group: 5-8 years</p>
+          <ul class="course-features" role="list">
+            <li role="listitem">Basic robot assembly and design</li>
+            <li role="listitem">Introduction to sensors and motors</li>
+            <li role="listitem">Simple visual programming</li>
+            <li role="listitem">Fun building challenges</li>
+            <li role="listitem">Safety and teamwork skills</li>
+          </ul>
+          <p class="course-price">₹17,643</p>
+          <button class="cta-button" aria-label="Enroll in Introduction to Robotics">Enroll Now</button>
+        </article>
+        <!-- Course 2 -->
+        <article class="course-card" role="listitem" data-course-id="arduino-robotics">
+          <div class="course-level" aria-label="Level: Intermediate">Intermediate</div>
+          <h3>⚙️ Arduino Programming & Robotics</h3>
+          <p class="course-duration">Duration: 12 weeks | 3 hours/week</p>
+          <p class="course-age">Age Group: 8-12 years</p>
+          <ul class="course-features" role="list">
+            <li role="listitem">Arduino microcontroller basics</li>
+            <li role="listitem">C++ programming for robots</li>
+            <li role="listitem">Motor control & automation</li>
+            <li role="listitem">Sensor data processing</li>
+            <li role="listitem">Build autonomous robots</li>
+          </ul>
+          <p class="course-price">₹30,942</p>
+          <button class="cta-button" aria-label="Enroll in Arduino Programming & Robotics">Enroll Now</button>
+        </article>
+        <!-- Course 3 -->
+        <article class="course-card" role="listitem" data-course-id="robotics-engineering">
+          <div class="course-level" aria-label="Level: Advanced">Advanced</div>
+          <h3>🔧 Robotics Engineering & Design</h3>
+          <p class="course-duration">Duration: 16 weeks | 4 hours/week</p>
+          <p class="course-age">Age Group: 12-16 years</p>
+          <ul class="course-features" role="list">
+            <li role="listitem">Mechanical engineering principles</li>
+            <li role="listitem">Advanced circuit design</li>
+            <li role="listitem">Python programming</li>
+            <li role="listitem">Real-world robotics projects</li>
+            <li role="listitem">Competition preparation</li>
+          </ul>
+          <p class="course-price">₹53,111</p>
+          <button class="cta-button" aria-label="Enroll in Robotics Engineering & Design">Enroll Now</button>
+        </article>
+        <!-- Course 4 -->
+        <article class="course-card" role="listitem" data-course-id="ai-robotics">
+          <div class="course-level" aria-label="Level: Specialist">Specialist</div>
+          <h3>🤖 AI & Machine Learning Robotics</h3>
+          <p class="course-duration">Duration: 14 weeks | 4 hours/week</p>
+          <p class="course-age">Age Group: 13-16 years</p>
+          <ul class="course-features" role="list">
+            <li role="listitem">AI concepts for robotics</li>
+            <li role="listitem">Machine learning basics</li>
+            <li role="listitem">Python & TensorFlow</li>
+            <li role="listitem">Intelligent robot programming</li>
+            <li role="listitem">Real-world AI projects</li>
+          </ul>
+          <p class="course-price">₹61,969</p>
+          <button class="cta-button" aria-label="Enroll in AI & Machine Learning Robotics">Enroll Now</button>
+        </article>
+        <!-- Course 5 -->
+        <article class="course-card" role="listitem" data-course-id="drone-robotics">
+          <div class="course-level" aria-label="Level: Specialist">Specialist</div>
+          <h3>🚁 Drone & Aerial Robotics</h3>
+          <p class="course-duration">Duration: 10 weeks | 3 hours/week</p>
+          <p class="course-age">Age Group: 11-16 years</p>
+          <ul class="course-features" role="list">
+            <li role="listitem">Drone mechanics & design</li>
+            <li role="listitem">Flight dynamics & control</li>
+            <li role="listitem">Autonomous flight programming</li>
+            <li role="listitem">Obstacle detection & navigation</li>
+            <li role="listitem">Safety & regulations</li>
+          </ul>
+          <p class="course-price">₹48,698</p>
+          <button class="cta-button" aria-label="Enroll in Drone & Aerial Robotics">Enroll Now</button>
+        </article>
+        <!-- Course 6 -->
+        <article class="course-card" role="listitem" data-course-id="summer-intensive">
+          <div class="course-level" aria-label="Level: Summer Camp">Summer Camp</div>
+          <h3>☀️ Robotics Summer Intensive</h3>
+          <p class="course-duration">Duration: 5 weeks | 5 hours/day</p>
+          <p class="course-age">Age Group: 6-15 years (Mixed)</p>
+          <ul class="course-features" role="list">
+            <li role="listitem">Full robotics immersion program</li>
+            <li role="listitem">Multiple skill levels covered</li>
+            <li role="listitem">Daily hands-on projects</li>
+            <li role="listitem">Team challenges & competitions</li>
+            <li role="listitem">Field trips & guest speakers</li>
+          </ul>
+          <p class="course-price">₹79,705</p>
+          <button class="cta-button" aria-label="Enroll in Robotics Summer Intensive">Enroll Now</button>
+        </article>
+      </section>
+      <!-- Course Demo Images -->
+      <section class="video-section" aria-labelledby="demos-title">
+        <h3 id="demos-title" class="section-title-with-video">
+          <span class="icon" aria-hidden="true">📚</span>
+          Course Demos & Tutorials
+        </h3>
+        <div class="video-grid" role="list">
+          <article class="video-card" role="listitem">
+            <figure class="video-container">
+              <img
+                src="https://th.bing.com/th/id/OIP.cG7NwDSIWTstCS_Ip6uc-wHaDo?w=349&h=171&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3"
+                alt="Tutorial thumbnail: Step-by-step guide to building a simple robot arm in the beginner course"
+                class="video-placeholder" loading="lazy">
+              <figcaption class="sr-only">Beginner Course Sample Video</figcaption>
+            </figure>
+            <div class="video-card-content">
+              <h4>Beginner Course Sample</h4>
+              <p>See what students learn in our beginner robotics course.</p>
+            </div>
+          </article>
+          <article class="video-card" role="listitem">
+            <figure class="video-container">
+              <img
+                src="https://th.bing.com/th/id/OIP.mpTy85r6gszlIyiEPz24DgHaE8?w=240&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3"
+                alt="Tutorial thumbnail: Coding a line-following robot using Arduino in the intermediate course"
+                class="video-placeholder" loading="lazy">
+              <figcaption class="sr-only">Arduino Programming Video</figcaption>
+            </figure>
+            <div class="video-card-content">
+              <h4>Arduino Programming</h4>
+              <p>A sample from our intermediate Arduino programming course.</p>
+            </div>
+          </article>
+          <article class="video-card" role="listitem">
+            <figure class="video-container">
+              <img
+                src="https://th.bing.com/th/id/OIP.8_EDIlbfPSJiEINMCPYiowHaES?w=269&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3"
+                alt="Tutorial thumbnail: Implementing machine learning for object recognition in advanced AI robotics"
+                class="video-placeholder" loading="lazy">
+              <figcaption class="sr-only">AI & Robotics Video</figcaption>
+            </figure>
+            <div class="video-card-content">
+              <h4>AI & Robotics</h4>
+              <p>Advanced AI concepts applied to robotics.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="learning-path" aria-labelledby="path-title">
+        <h3 id="path-title">📚 Learning Path & Progression</h3>
+        <div class="path-container" role="list">
+          <div class="path-step" role="listitem">
+            <h4>Level 1: Foundation</h4>
+            <p>Basic robotics & building</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="path-step" role="listitem">
+            <h4>Level 2: Programming</h4>
+            <p>Arduino & coding</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="path-step" role="listitem">
+            <h4>Level 3: Advanced</h4>
+            <p>Engineering & design</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="path-step" role="listitem">
+            <h4>Level 4: Specialist</h4>
+            <p>AI, IoT, Drones</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===========================
+       CREATE NOW / REGISTRATION SECTION
+       =========================== -->
+  <section class="content-section create-section" id="create">
+    <div class="container">
+      <h2>Register & Start Your Robotix Journey</h2>
+      <p class="section-intro">Join Little Genius today! Fill out the form below to enroll in our robotics programs,
+        purchase kits, or book a workshop.</p>
+      <!-- Registration Image -->
+      <div class="video-section">
+        <h3 class="section-title-with-video">
+          <span class="icon">📷</span>
+          How to Register
+        </h3>
+        <div class="video-container">
+          <img src="https://i.ytimg.com/vi/c4D7KUUn5FU/maxresdefault.jpg" alt="Guide to filling registration form"
+            class="video-placeholder">
+        </div>
+        <p style="text-align: center; margin-top: 15px; color: #666;">
+          Follow our quick guide to completing the registration process
+        </p>
+      </div>
+      <div class="register-container">
+        <form class="registration-form" id="enrollmentForm" method="POST" action="#submit">
+          <!-- Personal Information -->
+          <fieldset>
+            <legend>👤 Personal Information</legend>
+            <div class="form-group">
+              <label for="childName">Child's Full Name *</label>
+              <input type="text" id="childName" name="childName" required placeholder="Enter child's name" />
+            </div>
+            <div class="form-group">
+              <label for="childAge">Child's Age *</label>
+              <select id="childAge" name="childAge" required>
+                <option value="">Select age group</option>
+                <option value="5-7">5-7 years</option>
+                <option value="8-10">8-10 years</option>
+                <option value="11-13">11-13 years</option>
+                <option value="14-16">14-16 years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="parentName">Parent/Guardian Name *</label>
+              <input type="text" id="parentName" name="parentName" required placeholder="Enter your name" />
+            </div>
+          </fieldset>
+          <!-- Contact Information -->
+          <fieldset>
+            <legend>📞 Contact Information</legend>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+1-234-567-8900" />
+            </div>
+            <div class="form-group">
+              <label for="address">Address *</label>
+              <input type="text" id="address" name="address" required placeholder="City, State" />
+            </div>
+          </fieldset>
+          <!-- Program Selection -->
+          <fieldset>
+            <legend>🎯 Program Interest</legend>
+            <div class="form-group">
+              <label for="interest">I am interested in: *</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select an option</option>
+                <option value="course">📚 Enroll in Course</option>
+                <option value="product">🛒 Purchase Robotix Kit</option>
+                <option value="both">📚 Course + 🛒 Kit Bundle</option>
+                <option value="workshop">🎉 Workshop</option>
+                <option value="camp">☀️ Summer Camp</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="course">Select Course/Product: *</label>
+              <select id="course" name="course" required>
+                <option value="">Choose from our offerings</option>
+                <optgroup label="Courses">
+                  <option value="intro-robotics">Introduction to Robotics (8 weeks)</option>
+                  <option value="arduino-programming">Arduino Programming & Robotics (12 weeks)</option>
+                  <option value="advanced-engineering">Robotics Engineering & Design (16 weeks)</option>
+                  <option value="ai-ml">AI & Machine Learning Robotics (14 weeks)</option>
+                  <option value="drone">Drone & Aerial Robotics (10 weeks)</option>
+                  <option value="summer-camp">Robotics Summer Intensive (5 weeks)</option>
+                </optgroup>
+                <optgroup label="Products">
+                  <option value="beginner-kit">Beginner Robotics Kit - $79.99</option>
+                  <option value="intermediate-kit">Intermediate Robotics Kit - $149.99</option>
+                  <option value="advanced-kit">Advanced Robotics Kit - $249.99</option>
+                  <option value="competition-kit">Competition Robotics Kit - $399.99</option>
+                  <option value="smart-home-kit">Smart Home IoT Kit - $199.99</option>
+                  <option value="drone-kit">Drone & Aerial Robotics Kit - $299.99</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experience">Experience Level: *</label>
+              <select id="experience" name="experience" required>
+                <option value="">Select experience</option>
+                <option value="beginner">Beginner - No prior experience</option>
+                <option value="intermediate">Intermediate - Some robotics knowledge</option>
+                <option value="advanced">Advanced - Experienced with robotics</option>
+              </select>
+            </div>
+          </fieldset>
+          <!-- Additional Information -->
+          <fieldset>
+            <legend>📝 Additional Information</legend>
+            <div class="form-group">
+              <label for="goals">What are your learning goals?</label>
+              <textarea id="goals" name="goals" rows="4" placeholder="Tell us what you hope to achieve..."></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" name="newsletter" value="yes" />
+                Subscribe to our newsletter for updates and tips
+              </label>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" name="terms" value="yes" required />
+                I agree to the Terms & Conditions *
+              </label>
+            </div>
+          </fieldset>
+          <!-- Submit Button -->
+          <button type="submit" class="cta-button btn-submit">Complete Registration</button>
+          <p class="form-note">We'll contact you within 24 hours to confirm your enrollment.</p>
+        </form>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+          <h3>❓ Frequently Asked Questions</h3>
+          <div class="faq-item">
+            <h4>What age can children start robotics?</h4>
+            <p>Children as young as 5 can start with our beginner programs. We have age-appropriate courses for all
+              skill levels up to 16 years old.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Do children need prior programming experience?</h4>
+            <p>No! All our courses start from the basics. Our instructors guide complete beginners through every step.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>Are materials included in the courses?</h4>
+            <p>Yes! All robotics kits, components, and materials are included in the course fees. No hidden costs.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How often are classes held?</h4>
+            <p>Classes run on weekends (2-4 hours per week) and during summer with intensive camps available.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Can I purchase kits separately?</h4>
+            <p>Absolutely! You can buy our robotics kits independently even without enrolling in courses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       CONTACT SECTION
+       =========================== -->
+  <section class="content-section contact-section" id="contact">
+    <div class="container">
+      <h2>Get In Touch With Us</h2>
+      <p class="section-intro">Have questions? We'd love to hear from you! Reach out to our team anytime.</p>
+      <!-- Virtual Tour Image -->
+      <div class="video-section">
+        <h3 class="section-title-with-video">
+          <span class="icon">📷</span>
+          Virtual Tour of Our Facility
+        </h3>
+        <div class="video-container">
+          <img
+            src="https://th.bing.com/th/id/OIP.JKuZ-dqCS_bfzNCp-jVHTQHaCp?w=279&h=124&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3"
+            alt="Virtual tour of robotics facility" class="video-placeholder">
+        </div>
+        <p style="text-align: center; margin-top: 15px; color: #666;">
+          Take a virtual tour of our state-of-the-art robotics learning center
+        </p>
+      </div>
+      <div class="contact-wrapper">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3>📍 Our Location & Details</h3>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h4>Address</h4>
+            <p>Little Genius Robotix Center<br />
+              123 Innovation Street<br />
+              Tech City, CA 94025<br />
+              United States</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <h4>Phone</h4>
+            <p><strong>Main Office:</strong> +1-888-001-7903<br />
+              <strong>Support:</strong> +1-888-001-7904<br />
+              <strong>Admissions:</strong> +1-888-001-7905
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">✉️</div>
+            <h4>Email</h4>
+            <p><strong>General:</strong> info@littlegenius.com<br />
+              <strong>Support:</strong> support@littlegenius.com<br />
+              <strong>Admissions:</strong> admissions@littlegenius.com<br />
+              <strong>Partnerships:</strong> partnerships@littlegenius.com
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🕒</div>
+            <h4>Business Hours</h4>
+            <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br />
+              <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br />
+              <strong>Sunday:</strong> Closed<br />
+              <strong>Holidays:</strong> Closed
+            </p>
+          </div>
+          <h3 style="margin-top: 40px;">🤝 Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link facebook">Facebook</a>
+            <a href="#" class="social-link twitter">Twitter</a>
+            <a href="#" class="social-link instagram">Instagram</a>
+            <a href="#" class="social-link linkedin">LinkedIn</a>
+            <a href="#" class="social-link youtube">YouTube</a>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3>💬 Send us a Message</h3>
+          <form class="contact-form" id="contactForm" method="POST" action="#submit">
+            <div class="form-group">
+              <label for="contactName">Your Name *</label>
+              <input type="text" id="contactName" name="contactName" required placeholder="Full Name" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" name="contactEmail" required placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" name="contactPhone" placeholder="+1-234-567-8900" />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject *</label>
+              <select id="contactSubject" name="contactSubject" required>
+                <option value="">Select Subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="courses">Course Information</option>
+                <option value="products">Product Information</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="support">Technical Support</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="contactMessage" rows="6" required
+                placeholder="Please share your message..."></textarea>
+            </div>
+            <button type="submit" class="cta-button btn-submit">Send Message</button>
+            <p class="form-note">We'll get back to you within 24 hours.</p>
+          </form>
+        </div>
+      </div>
+      <!-- Map Section (Optional) -->
+      <div class="map-section">
+        <h3>📺 Find Us on the Map</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019616886823!2d-122.41941592346984!3d37.77492997120408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808585b0b7f5f5f5%3A0x123456789!2s123%20Innovation%20Street%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1699051234567"
+          width="100%" height="400" style="border: none; border-radius: 12px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Little Genius Robotix</h3>
+          <p>Empowering children through robotics, coding, and STEM education since 2020.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#courses">Robotics Courses</a></li>
+            <li><a href="#products">Robotics Kits</a></li>
+            <li><a href="#">Summer Camps</a></li>
+            <li><a href="#">Workshops</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links-footer">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Little Genius Robotix. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms
+            of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="style/js/main.js"></script>
+</body>
+
+</html>

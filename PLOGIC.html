@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="PLUGIC – Advanced Visual Logic Programming Platform for IoT, Automation, Microcontrollers, and STEM Education">
+  <meta name="keywords"
+    content="visual programming, logic circuits, IoT, Arduino, micro:bit, automation, STEM, drag-and-drop">
+  <meta name="author" content="PLUGIC Team">
+  <meta property="og:title" content="PLUGIC – Visual Logic Programming">
+  <meta property="og:description" content="Build logic circuits without coding. Drag, test, deploy.">
+  <meta property="og:image" content="images/og.png">
+  <title>PLUGIC – Advanced Visual Logic Programming Tool</title>
+  <link rel="stylesheet" href="pluggic.css">
+  <link rel="icon" href="images/logof.jpg" type="image/jpeg">
+  <style>
+    /* Mobile-only button styles */
+    .mobile-only-btn {
+      display: none; /* Hidden by default */
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+      transition: all 0.3s ease;
+      min-height: 48px; /* Touch-friendly */
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-only-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    }
+    @media (max-width: 768px) {
+      .mobile-only-btn {
+        display: flex; /* Show only on mobile */
+      }
+    }
+  </style>
+</head>
+
+<body>  
+
+  <!-- Skip to Main Content (Accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav" role="navigation" aria-label="Main navigation" id="top-nav">
+    <div class="logo-bar">
+      <a href="#hero" class="logo-link" aria-label="PLUGIC Home">
+        <img src="../images/logof.jpg" alt="PLUGIC Logo" class="logo-img" loading="lazy">
+        <span class="logo-text">PLUGGIC</span>
+      </a>
+      <!-- Mobile-only button: Toggles menubar visibility on mobile -->
+      <button class="mobile-only-btn" onclick="toggleMobileMenu()" aria-label="Toggle full menubar access on mobile" aria-expanded="false">☰ Menu</button>
+    </div>
+    <!-- Hamburger for mobile (hidden on desktop, shown on mobile) -->
+    <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" role="menubar" id="nav-menu">
+      <li role="none"><a href="#what" role="menuitem" tabindex="0">What is it?</a></li>
+      <li role="none"><a href="#special" role="menuitem" tabindex="-1">What's Special</a></li>
+      <li role="none"><a href="#how" role="menuitem" tabindex="-1">How It Works</a></li>
+      <li role="none"><a href="#features" role="menuitem" tabindex="-1">Features</a></li>
+      <li role="none"><a href="#learn" role="menuitem" tabindex="-1">Learn</a></li>
+      <li role="none"><a href="#community" role="menuitem" tabindex="-1">Community</a></li>
+      <li role="none"><a href="#stories" role="menuitem" tabindex="-1">Stories</a></li>
+      <li role="none"><a href="#faq" role="menuitem" tabindex="-1">FAQ</a></li>
+      <li role="none"><a href="#download" role="menuitem" tabindex="-1">Download</a></li>
+      <li role="none"><button class="run-btn-nav" aria-label="Launch PLUGIC Online Editor">Run Online</button></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+    <div class="hero-background" role="img" aria-label="Dynamic visual programming interface with gradient"></div>
+    <div class="wave" aria-hidden="true"></div>
+    <div class="wave" aria-hidden="true" style="transform: skewY(2deg); opacity: 0.05;"></div>
+    <div class="wave" aria-hidden="true" style="transform: skewY(-1deg); opacity: 0.03;"></div>
+
+    <div class="hero-inner">
+      <div class="left">
+        <h1 id="hero-heading">
+          <span>small, fast,</span><br>
+          <span class="underline">human-friendly</span>
+        </h1>
+        <p class="tagline">SPEAKS YOUR LANGUAGE</p>
+        <p class="hero-desc">
+          PLUGIC takes you from concept to working circuit with drag-and-drop blocks. Build, test, and deploy
+          algorithms in minutes—even if you've never coded before.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">50K+</span>
+            <span class="stat-label">Active Users</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Supported Boards</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="cta-btn primary" aria-label="Download PLUGIC">
+            <span>⬇️ Download</span>
+          </button>
+          <button class="cta-btn secondary" aria-label="View Tutorials">
+            <span>📚 Tutorials</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="blocks-stack" aria-hidden="true" role="presentation">
+          <div class="block if-block">if</div>
+          <div class="block coding-block">coding is fun</div>
+          <div class="block smile-block">make boardie smile :)</div>
+        </div>
+        <div class="hero-blocks-image" aria-hidden="true" role="presentation">
+          <div class="light-beam"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <img src="../images/og.png" alt="PLUGIC visual programming interface" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- What is PLUGIC? Section -->
+    <section id="what" class="section info-section">
+      <div class="section-inner">
+        <h2>What is PLUGIC?</h2>
+        <p class="section-intro">
+          <strong>PLUGIC</strong> is a revolutionary visual programming platform engineered for logic circuits,
+          automation, IoT devices, and microcontrollers. It empowers users of all skill levels to create,
+          simulate, and deploy logic-based solutions using an intuitive drag-and-drop interface—no traditional
+          coding required.
+        </p>
+
+        <div class="info-features">
+          <div class="features-left">
+            <h3>Core Capabilities</h3>
+            <ul>
+              <li>🚦 Visual logic gate editor with 20+ logic functions</li>
+              <li>📱 Instant deployment to hardware (Arduino, ESP32, micro:bit, RPi)</li>
+              <li>🔗 Modular architecture supports plugins and custom blocks</li>
+              <li>🎓 Educational tools for classrooms and makerspaces</li>
+              <li>📈 Real-time data visualization, live debugging, and simulation</li>
+              <li>☁️ Cloud collaboration and project versioning</li>
+              <li>🔌 Extensive sensor and motor library integration</li>
+              <li>📊 Advanced data logging and export to CSV/JSON</li>
+            </ul>
+          </div>
+
+          <div class="info-diagram">
+            <!-- Architecture Diagram -->
+            <figure>
+              <svg viewBox="0 0 300 250" style="width: 100%; max-width: 300px;" role="img"
+                aria-label="PLUGIC Architecture: Drag Blocks, Logic Engine, Sensors & Output">
+
+                <!-- Title -->
+                <text x="150" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">
+                  PLUGIC Architecture
+                </text>
+
+                <!-- Top Layer: Drag Blocks -->
+                <rect x="20" y="40" width="260" height="50" rx="8" fill="#fde047" stroke="#353535" stroke-width="2" />
+                <text x="150" y="72" text-anchor="middle" font-size="16" fill="#353535" font-weight="bold">
+                  📦 Drag & Drop Blocks Interface
+                </text>
+
+                <!-- Middle Layer: Logic Engine -->
+                <rect x="20" y="110" width="260" height="50" rx="8" fill="#a855f7" stroke="#353535" stroke-width="2" />
+                <text x="150" y="142" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">
+                  ⚙️ Real-time Logic Engine & Simulator
+                </text>
+
+                <!-- Bottom Layer: Three outputs -->
+                <g>
+                  <!-- Sensors -->
+                  <rect x="20" y="180" width="75" height="50" rx="6" fill="#fb923c" stroke="#353535" stroke-width="2" />
+                  <text x="57.5" y="210" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">
+                    🔌 Sensors
+                  </text>
+
+                  <!-- Logic -->
+                  <rect x="112.5" y="180" width="75" height="50" rx="6" fill="#10b981" stroke="#353535"
+                    stroke-width="2" />
+                  <text x="150" y="210" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">
+                    🧠 Logic
+                  </text>
+
+                  <!-- Output -->
+                  <rect x="205" y="180" width="75" height="50" rx="6" fill="#0ea5e9" stroke="#353535"
+                    stroke-width="2" />
+                  <text x="242.5" y="210" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">
+                    ⚡ Output
+                  </text>
+                </g>
+
+                <!-- Arrows -->
+                <line x1="150" y1="90" x2="150" y2="110" stroke="#353535" stroke-width="2"
+                  marker-end="url(#arrowhead)" />
+                <line x1="80" y1="160" x2="57.5" y2="180" stroke="#353535" stroke-width="2"
+                  marker-end="url(#arrowhead)" />
+                <line x1="150" y1="160" x2="150" y2="180" stroke="#353535" stroke-width="2"
+                  marker-end="url(#arrowhead)" />
+                <line x1="220" y1="160" x2="242.5" y2="180" stroke="#353535" stroke-width="2"
+                  marker-end="url(#arrowhead)" />
+
+                <defs>
+                  <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#353535" />
+                  </marker>
+                </defs>
+              </svg>
+              <figcaption>PLUGIC system architecture showing the flow from blocks to output</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Special Section -->
+    <section id="special" class="section special-section">
+      <div class="section-inner">
+        <h2>What Makes PLUGIC Special?</h2>
+
+        <div class="feature-tags">
+          <span class="tag tag-orange">Live</span>
+          <span class="tag tag-purple">Interactive</span>
+          <span class="tag tag-teal">Multi-Board</span>
+          <span class="tag tag-blue">Cloud-Ready</span>
+        </div>
+
+        <div class="special-grid">
+          <!-- Card 1 -->
+          <article class="special-card">
+            <div class="card-header">
+              <span class="feature-number">1</span>
+              <h3>Live Interactive Coding</h3>
+            </div>
+            <p>
+              Blocks run on your board the instant you snap them together. Get real-time feedback, interactive
+              graphing of sensor data, and live debugging—no downloads or compilation delays.
+            </p>
+            <div class="card-feature-list">
+              <small>✓ Instant execution</small>
+              <small>✓ Live data plots</small>
+              <small>✓ Real-time debugging</small>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="special-card">
+            <div class="card-header">
+              <span class="feature-number">2</span>
+              <h3>Multi-Task, Multi-Board</h3>
+            </div>
+            <p>
+              Split your logic into multiple concurrent scripts, each running in parallel on your device.
+              PLUGIC works seamlessly across Arduino, ESP32, micro:bit, Raspberry Pi, and 15+ other platforms.
+            </p>
+            <div class="card-feature-list">
+              <small>✓ Parallel execution</small>
+              <small>✓ 20+ supported boards</small>
+              <small>✓ Portable code</small>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="special-card">
+            <div class="card-header">
+              <span class="feature-number">3</span>
+              <h3>Collaboration & Cloud</h3>
+            </div>
+            <p>
+              Save projects locally or sync to the cloud. Share circuits with your team, collaborate in real-time,
+              fork public templates, and contribute improvements to the community.
+            </p>
+            <div class="card-feature-list">
+              <small>✓ Cloud sync</small>
+              <small>✓ Team collaboration</small>
+              <small>✓ Version history</small>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="special-card">
+            <div class="card-header">
+              <span class="feature-number">4</span>
+              <h3>Offline & Standalone</h3>
+            </div>
+            <p>
+              Download compiled code to your board and unplug. Your logic runs autonomously without a computer,
+              making it perfect for wearables, games, experiments, and remote installations.
+            </p>
+            <div class="card-feature-list">
+              <small>✓ Offline mode</small>
+              <small>✓ Standalone execution</small>
+              <small>✓ No internet required</small>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="special-card">
+            <div class="card-header">
+              <span class="feature-number">5</span>
+              <h3>Advanced Simulation</h3>
+            </div>
+            <p>
+              Test your logic before deploying to hardware. Full-featured simulator with mock sensors, virtual I/O,
+              and time-travel debugging for rapid prototyping.
+            </p>
+            <div class="card-feature-list">
+              <small>✓ Virtual testing</small>
+              <small>✓ Mock sensors</small>
+              <small>✓ Time-travel debug</small>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="special-card">
+            <div class="card-header">
+              <span class="feature-number">6</span>
+              <h3>Extensible Architecture</h3>
+            </div>
+            <p>
+              Create custom logic blocks, write plugins, and integrate with external APIs. PLUGIC is open-source
+              and designed to evolve with your needs.
+            </p>
+            <div class="card-feature-list">
+              <small>✓ Custom blocks</small>
+              <small>✓ Plugin API</small>
+              <small>✓ Open source</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how" class="section how-section">
+      <div class="section-inner">
+        <h2>How PLUGIC Works</h2>
+
+        <div class="how-steps-grid">
+          <div class="how-step">
+            <span class="step-number" aria-hidden="true">1</span>
+            <h4>Pick Your Board</h4>
+            <p>
+              Select your target microcontroller from our library of 20+ supported devices: Arduino Uno, Arduino
+              Mega, ESP8266, ESP32, micro:bit, Raspberry Pi, Adafruit boards, and more.
+            </p>
+            <div class="step-icon">🎯</div>
+          </div>
+
+          <div class="how-step">
+            <span class="step-number" aria-hidden="true">2</span>
+            <h4>Build Logic Visually</h4>
+            <p>
+              Drag logic gates, sensor readers, math blocks, comparators, timers, and output blocks onto your
+              canvas. Connect them with wires to build complex automation flows.
+            </p>
+            <div class="step-icon">🧩</div>
+          </div>
+
+          <div class="how-step">
+            <span class="step-number" aria-hidden="true">3</span>
+            <h4>Test & Simulate</h4>
+            <p>
+              Run your circuit instantly in the browser simulator. Monitor real-time data, graph sensor values,
+              spot bugs, and refine your logic before deploying to hardware.
+            </p>
+            <div class="step-icon">🧪</div>
+          </div>
+
+          <div class="how-step">
+            <span class="step-number" aria-hidden="true">4</span>
+            <h4>Deploy & Run</h4>
+            <p>
+              Send your circuit to your physical device with a single click. Your logic runs immediately, and
+              you can disconnect to operate in standalone mode.
+            </p>
+            <div class="step-icon">🚀</div>
+          </div>
+        </div>
+
+        <!-- Workflow Diagram -->
+        <figure class="workflow-diagram">
+          <svg viewBox="0 0 550 100" width="100%" height="100" role="img"
+            aria-label="Workflow: Idea → Design → Build → Test → Run → Result → Iterate">
+
+            <!-- Title -->
+            <text x="275" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">
+              Complete PLUGIC Workflow Cycle
+            </text>
+
+            <!-- Idea -->
+            <circle cx="50" cy="55" r="18" fill="#fde047" stroke="#353535" stroke-width="2" />
+            <text x="50" y="60" font-size="12" text-anchor="middle" fill="#000" font-weight="bold">💡</text>
+
+            <!-- Arrow 1 -->
+            <path d="M 68 55 L 95 55" stroke="#a855f7" stroke-width="3" fill="none" marker-end="url(#arrow-purple)" />
+
+            <!-- Design -->
+            <circle cx="120" cy="55" r="18" fill="#ec4899" stroke="#353535" stroke-width="2" />
+            <text x="120" y="60" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold">🎨</text>
+
+            <!-- Arrow 2 -->
+            <path d="M 138 55 L 165 55" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrow-orange)" />
+
+            <!-- Build -->
+            <circle cx="190" cy="55" r="18" fill="#10b981" stroke="#353535" stroke-width="2" />
+            <text x="190" y="60" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold">🛠️</text>
+
+            <!-- Arrow 3 -->
+            <path d="M 208 55 L 235 55" stroke="#3b82f6" stroke-width="3" fill="none" marker-end="url(#arrow-blue)" />
+
+            <!-- Test -->
+            <circle cx="260" cy="55" r="18" fill="#8b5cf6" stroke="#353535" stroke-width="2" />
+            <text x="260" y="60" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold">🧪</text>
+
+            <!-- Arrow 4 -->
+            <path d="M 278 55 L 305 55" stroke="#ec4899" stroke-width="3" fill="none" marker-end="url(#arrow-pink)" />
+
+            <!-- Run -->
+            <circle cx="330" cy="55" r="18" fill="#0ea5e9" stroke="#353535" stroke-width="2" />
+            <text x="330" y="60" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold">⚡</text>
+
+            <!-- Arrow 5 -->
+            <path d="M 348 55 L 375 55" stroke="#10b981" stroke-width="3" fill="none" marker-end="url(#arrow-green)" />
+
+            <!-- Result -->
+            <circle cx="400" cy="55" r="18" fill="#262626" stroke="#353535" stroke-width="2" />
+            <text x="400" y="60" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold">✅</text>
+
+            <!-- Arrow 6 (Cycle) -->
+            <path d="M 418 55 L 500 55 Q 510 55 510 70 Q 510 85 50 85 Q 40 85 40 70 L 40 65" stroke="#5fc3d7"
+              stroke-width="3" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow-cyan)" />
+            <text x="510" y="75" font-size="10" fill="#5fc3d7" font-weight="bold">Iterate</text>
+
+            <!-- Arrow markers -->
+            <defs>
+              <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#a855f7" />
+              </marker>
+              <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#f59e0b" />
+              </marker>
+              <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#3b82f6" />
+              </marker>
+              <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#ec4899" />
+              </marker>
+              <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+              </marker>
+              <marker id="arrow-cyan" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#5fc3d7" />
+              </marker>
+            </defs>
+          </svg>
+          <figcaption>The complete PLUGIC workflow from idea to deployment with continuous iteration</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+      <div class="section-inner">
+        <h2>Comprehensive Feature Set</h2>
+        <p class="section-intro">
+          PLUGIC includes everything you need to build professional-grade logic circuits and automation solutions.
+        </p>
+
+        <div class="features-grid">
+          <!-- Feature 1: Logic Gates -->
+          <article class="feature-box">
+            <h3>🔲 Logic Gates & Functions (20+)</h3>
+            <p>
+              Full suite of digital logic: AND, OR, NOT, NAND, NOR, XOR, XNOR, multiplexers, demultiplexers,
+              latches, flip-flops, counters, and state machines.
+            </p>
+            <details class="feature-details">
+              <summary>View Truth Tables</summary>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Input A</th>
+                    <th scope="col">Input B</th>
+                    <th scope="col">AND</th>
+                    <th scope="col">OR</th>
+                    <th scope="col">XOR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </article>
+
+          <!-- Feature 2: Sensors -->
+          <article class="feature-box">
+            <h3>🔌 Sensor Integration Library</h3>
+            <p>
+              Built-in support for temperature, humidity, light, motion, pressure, gas, voltage, current, and
+              ultrasonic sensors. Real-time data acquisition and preprocessing.
+            </p>
+            <ul>
+              <li>DHT11/DHT22 temperature & humidity</li>
+              <li>Light sensors (LDR, BH1750)</li>
+              <li>Motion sensors (PIR, ultrasonic)</li>
+              <li>Pressure sensors (BMP280)</li>
+              <li>Gas sensors (MQ series)</li>
+            </ul>
+          </article>
+
+          <!-- Feature 3: Motors & Outputs -->
+          <article class="feature-box">
+            <h3>⚙️ Motor & Output Control</h3>
+            <p>
+              Full control over DC motors, servo motors, relays, buzzers, LEDs, displays (LCD, OLED), and speaker
+              output. PWM support for speed control.
+            </p>
+            <div class="feature-actions">
+              <button class="cta-btn small" aria-label="Test motor control">Test Motor Control →</button>
+              <button class="cta-btn small secondary" aria-label="Servo examples">Servo Examples →</button>
+            </div>
+          </article>
+
+          <!-- Feature 4: Data Logging -->
+          <article class="feature-box">
+            <h3>📊 Advanced Data Logging</h3>
+            <p>
+              Record sensor data with timestamps, generate reports, export to CSV/JSON, and create real-time
+              dashboards. Perfect for experiments and system monitoring.
+            </p>
+            <pre>
+<code>[12:39:04] Temp: 26.1°C | Hum: 43% | Status: OK
+[12:39:06] Motor: ON | Speed: 52% | Current: 245mA
+[12:39:08] Light: 672lx | Alert: None | Battery: 87%</code>
+            </pre>
+          </article>
+
+          <!-- Feature 5: Templates -->
+          <article class="feature-box">
+            <h3>📚 100+ Ready-Made Templates</h3>
+            <p>
+              Pre-built solutions for common tasks. Edit, customize, and deploy instantly. Templates include traffic
+              lights, thermostats, alarms, robot controllers, and more.
+            </p>
+            <ul>
+              <li>🚦 Traffic Light Controller</li>
+              <li>🌡️ Smart Thermostat</li>
+              <li>💡 Automatic Lighting System</li>
+              <li>🔔 Security Alarm</li>
+              <li>🤖 Robot Navigation</li>
+              <li>🏠 Home Automation Kit</li>
+            </ul>
+          </article>
+
+          <!-- Feature 6: API & Custom Blocks -->
+          <article class="feature-box">
+            <h3>🔌 Custom Blocks & API Integration</h3>
+            <p>
+              Create custom logic blocks and integrate with external APIs, cloud services, and IoT platforms.
+              RESTful endpoints, webhooks, and MQTT support.
+            </p>
+            <code>
+GET /api/sensor/temperature
+POST /webhook/alert
+MQTT: plugic/device/status
+            </code>
+          </article>
+
+          <!-- Feature 7: Real-time Visualization -->
+          <article class="feature-box">
+            <h3>📈 Real-time Data Visualization</h3>
+            <p>
+              Interactive graphs, gauges, and live dashboards. Monitor multiple sensor streams simultaneously,
+              set thresholds, and trigger alarms.
+            </p>
+            <div class="chart-placeholder" role="img"
+              aria-label="Sample real-time data chart showing temperature and humidity over time"></div>
+          </article>
+
+          <!-- Feature 8: Cloud & Collaboration -->
+          <article class="feature-box">
+            <h3>☁️ Cloud Sync & Team Collaboration</h3>
+            <p>
+              Automatically sync projects to the cloud, share with team members, collaborate in real-time, and
+              maintain full version history with rollback capability.
+            </p>
+            <ul>
+              <li>Automatic cloud backup</li>
+              <li>Real-time collaboration</li>
+              <li>Version control & rollback</li>
+              <li>Team permissions & roles</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section id="learn" class="section learning-section">
+      <div class="section-inner">
+        <h2>Learning Paths for All Levels</h2>
+        <p class="section-intro">
+          Structured learning tracks designed by educators to take you from beginner to advanced.
+        </p>
+
+        <div class="learning-tracks">
+          <article class="track beginner-track">
+            <h4>🌱 Beginner Track <span class="track-duration">2 weeks</span></h4>
+            <div class="track-progress" style="width: 20%;" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+              aria-valuemax="100"></div>
+            <ul>
+              <li>Introduction to logic gates</li>
+              <li>Your first circuit (LED blink)</li>
+              <li>Using buttons and switches</li>
+              <li>Understanding circuits</li>
+              <li>Troubleshooting basics</li>
+            </ul>
+            <span class="resources">📹 8 video lessons • 📋 12 tutorials • 🎮 5 hands-on projects</span>
+            <button class="cta-btn small" aria-label="Start Beginner Track">Start Learning →</button>
+          </article>
+
+          <article class="track intermediate-track">
+            <h4>📈 Intermediate Track <span class="track-duration">4 weeks</span></h4>
+            <div class="track-progress" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100"></div>
+            <ul>
+              <li>Robotics & motor control</li>
+              <li>Sensor integration</li>
+              <li>Data visualization & graphing</li>
+              <li>Timers and counters</li>
+              <li>State machines</li>
+            </ul>
+            <span class="resources">📹 18 video lessons • 📋 21 tutorials • 🎮 10 hands-on projects</span>
+            <button class="cta-btn small" aria-label="Start Intermediate Track">Start Learning →</button>
+          </article>
+
+          <article class="track advanced-track">
+            <h4>🚀 Advanced Track <span class="track-duration">6+ weeks</span></h4>
+            <div class="track-progress" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+              aria-valuemax="100"></div>
+            <ul>
+              <li>Custom block development</li>
+              <li>API integration & cloud</li>
+              <li>IoT protocols (MQTT, HTTP)</li>
+              <li>Advanced simulation</li>
+              <li>Production deployment</li>
+            </ul>
+            <span class="resources">📹 25 video lessons • 📋 30 tutorials • 🎮 15 hands-on projects</span>
+            <button class="cta-btn small" aria-label="Start Advanced Track">Start Learning →</button>
+          </article>
+        </div>
+
+        <div class="extra-learn">
+          <button class="cta-btn primary" aria-label="Browse All Tutorials">📚 Browse All Tutorials</button>
+          <button class="cta-btn secondary" aria-label="View Example Projects">🔍 Example Projects</button>
+          <button class="cta-btn secondary" aria-label="Watch Video Series">📹 Video Series</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section community-section">
+      <div class="section-inner">
+        <h2>Join the Global PLUGIC Community</h2>
+        <p class="section-intro">
+          Connect with thousands of makers, educators, engineers, and students worldwide. Share projects, collaborate,
+          participate in contests, and grow together.
+        </p>
+
+        <div class="community-grid">
+          <div class="community-item">
+            <h3>💬 Forum & Discussions</h3>
+            <p>Ask questions, share ideas, and get help from experienced community members.</p>
+            <a href="#" class="link-button">Join Forum →</a>
+          </div>
+
+          <div class="community-item">
+            <h3>🎮 Discord Community</h3>
+            <p>Real-time chat, voice calls, and instant support from moderators and peers.</p>
+            <a href="#" class="link-button">Join Discord →</a>
+          </div>
+
+          <div class="community-item">
+            <h3>📂 GitHub Repository</h3>
+            <p>Open-source code, contribute features, report bugs, and shape the future of PLUGIC.</p>
+            <a href="#" class="link-button">View GitHub →</a>
+          </div>
+
+          <div class="community-item">
+            <h3>📰 Blog & Articles</h3>
+            <p>Regular posts on tips, tricks, project showcases, and community highlights.</p>
+            <a href="#" class="link-button">Read Blog →</a>
+          </div>
+
+          <div class="community-item">
+            <h3>🏆 Contests & Challenges</h3>
+            <p>Monthly challenges with prizes, hackathons, and community events.</p>
+            <a href="#" class="link-button">View Contests →</a>
+          </div>
+
+          <div class="community-item">
+            <h3>📡 Showcase Gallery</h3>
+            <p>Explore amazing projects built by the community and get inspired.</p>
+            <a href="#" class="link-button">Browse Gallery →</a>
+          </div>
+        </div>
+
+        <div class="community-stats">
+          <div class="stat">
+            <span class="stat-big">50K+</span>
+            <span class="stat-label">Active Users</span>
+          </div>
+          <div class="stat">
+            <span class="stat-big">10K+</span>
+            <span class="stat-label">Projects Shared</span>
+          </div>
+          <div class="stat">
+            <span class="stat-big">24/7</span>
+            <span class="stat-label">Community Support</span>
+          </div>
+          <div class="stat">
+            <span class="stat-big">150+</span>
+            <span class="stat-label">Contributors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Stories Section -->
+    <section id="stories" class="section stories-section">
+      <div class="section-inner">
+        <h2>Real-World Success Stories</h2>
+        <p class="section-intro">
+          Discover how educators, makers, and engineers are using PLUGIC to solve real problems and innovate.
+        </p>
+
+        <div class="stories-grid">
+          <article class="story">
+            <header class="story-header">
+              <h4>🏫 Classroom Automation System</h4>
+              <span class="story-category">Education</span>
+            </header>
+            <p>
+              "A high school science teacher used PLUGIC to automate experiment logging, safety alarms, and data
+              collection for 200+ students. Reduced setup time by 80%."
+            </p>
+            <footer class="story-footer">
+              <strong>Sarah Chen, Science Teacher</strong><br>
+              <span class="story-location">San Francisco, USA</span>
+            </footer>
+          </article>
+
+          <article class="story">
+            <header class="story-header">
+              <h4>🏢 Smart Office Lighting</h4>
+              <span class="story-category">Commercial</span>
+            </header>
+            <p>
+              "A startup deployed sensor-driven office lights using PLUGIC and ESP32 modules. Result: 20% energy
+              savings, improved employee satisfaction, ROI in 6 months."
+            </p>
+            <footer class="story-footer">
+              <strong>Marcus Johnson, CTO</strong><br>
+              <span class="story-location">New York, USA</span>
+            </footer>
+          </article>
+
+          <article class="story">
+            <header class="story-header">
+              <h4>🏠 Home IoT System</h4>
+              <span class="story-category">DIY/Maker</span>
+            </header>
+            <p>
+              "Built a voice-controlled smart home with PLUGIC blocks. Thermostat, security, and lighting all
+              connected. No coding experience needed!"
+            </p>
+            <footer class="story-footer">
+              <strong>Alex Rodriguez, Maker</strong><br>
+              <span class="story-location">Austin, Texas</span>
+            </footer>
+          </article>
+
+          <article class="story">
+            <header class="story-header">
+              <h4>🚜 Agricultural Automation</h4>
+              <span class="story-category">Industrial</span>
+            </header>
+            <p>
+              "An agricultural tech company used PLUGIC to prototype an IoT irrigation system. Deployed to 500+
+              farms, increased crop yield by 15%."
+            </p>
+            <footer class="story-footer">
+              <strong>Dr. Patel, Lead Engineer</strong><br>
+              <span class="story-location">Bangalore, India</span>
+            </footer>
+          </article>
+
+          <article class="story">
+            <header class="story-header">
+              <h4>🤖 Educational Robot</h4>
+              <span class="story-category">STEM</span>
+            </header>
+            <p>
+              "A university robotics club used PLUGIC to teach 150 students about embedded systems without overwhelming
+              them with C++ syntax."
+            </p>
+            <footer class="story-footer">
+              <strong>Prof. Elena Vasquez</strong><br>
+              <span class="story-location">Madrid, Spain</span>
+            </footer>
+          </article>
+
+          <article class="story">
+            <header class="story-header">
+              <h4>📡 Remote Monitoring</h4>
+              <span class="story-category">Industrial</span>
+            </header>
+            <p>
+              "A manufacturing plant deployed PLUGIC-based monitoring for equipment health. Reduced downtime by 30%
+              and predictive maintenance improved."
+            </p>
+            <footer class="story-footer">
+              <strong>James Wilson, Plant Manager</strong><br>
+              <span class="story-location">Detroit, USA</span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+      <div class="section-inner">
+        <h2>Frequently Asked Questions</h2>
+
+        <dl class="faq-list">
+          <div class="faq-item">
+            <dt>
+              <h4>Can I use PLUGIC without coding experience?</h4>
+            </dt>
+            <dd>
+              <strong>Yes!</strong> PLUGIC is specifically designed for non-programmers. The visual drag-and-drop
+              interface requires no traditional coding. However, if you want to write custom blocks, basic programming
+              knowledge helps.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>What hardware does PLUGIC support?</h4>
+            </dt>
+            <dd>
+              <strong>20+ platforms:</strong> Arduino (Uno, Mega, Pro Micro), ESP8266, ESP32, micro:bit, Raspberry Pi,
+              Adafruit boards (Arduino-compatible), and STM32 microcontrollers. Support for new boards is regularly
+              added based on community feedback.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>Can I run my logic offline on the board?</h4>
+            </dt>
+            <dd>
+              <strong>Absolutely!</strong> Compile your logic and download it to your board. It runs standalone without
+              needing a PC or internet connection. Perfect for wearables, remote installations, and portable projects.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>Is PLUGIC free and open source?</h4>
+            </dt>
+            <dd>
+              <strong>Yes!</strong> PLUGIC is released under the MIT License. All code, templates, and documentation
+              are open source. You can fork the repository, contribute features, and even run your own instance.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>How can I get help or report bugs?</h4>
+            </dt>
+            <dd>
+              <strong>Multiple options:</strong> Join our Discord for live chat support, post on the forum, or open an
+              issue on GitHub. Response times are typically 24–48 hours. Premium support plans are also available for
+              enterprise users.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>Can I collaborate with my team on projects?</h4>
+            </dt>
+            <dd>
+              <strong>Yes!</strong> Cloud sync allows real-time collaboration. Share projects with team members, set
+              permissions (view/edit), and maintain version history. Perfect for classrooms and professional teams.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>What about data security and privacy?</h4>
+            </dt>
+            <dd>
+              <strong>Strong protection:</strong> PLUGIC uses 256-bit encryption for data in transit and at rest. We
+              comply with GDPR, CCPA, and other privacy regulations. All code execution happens on your device or your
+              own server—we don't access your logic or data.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <h4>Can I integrate PLUGIC with external APIs or cloud services?</h4>
+            </dt>
+            <dd>
+              <strong>Yes!</strong> PLUGIC supports RESTful API calls, webhooks, MQTT, and custom integrations. Connect
+              to AWS IoT, Google Cloud, Azure, ThingSpeak, and more. Our API documentation has examples for popular
+              services.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="section download-section">
+      <div class="section-inner">
+        <h2>Download PLUGIC</h2>
+        <p class="section-intro">
+          Choose your platform and start building visual logic circuits today. Available for Windows, macOS, Linux,
+          and browser-based.
+        </p>
+
+        <div class="download-options">
+          <div class="download-card">
+            <h3>💻 Desktop Application</h3>
+            <p class="version">Version 2.4.1 • Updated Nov 2025</p>
+            <div class="download-buttons">
+              <a href="#" class="btn btn-primary" download aria-label="Download PLUGIC for Windows">
+                🪟 Windows (64-bit)
+              </a>
+              <a href="#" class="btn btn-secondary" download aria-label="Download PLUGIC for macOS">
+                🍎 macOS (Intel & M1/M2)
+              </a>
+              <a href="#" class="btn btn-secondary" download aria-label="Download PLUGIC for Linux">
+                🐧 Linux (AppImage)
+              </a>
+            </div>
+            <p class="system-requirements">
+              <small><strong>System Requirements:</strong> 4GB RAM, 100MB storage, modern processor</small>
+            </p>
+          </div>
+
+          <div class="download-card">
+            <h3>🌐 Online Editor (Browser)</h3>
+            <p class="version">Always up-to-date • No installation needed</p>
+            <a href="#" class="btn btn-primary" aria-label="Launch PLUGIC online editor">
+              Launch Online Editor →
+            </a>
+            <p class="browser-note">
+              <small>Works on Chrome, Firefox, Safari, and Edge. Save projects locally or to cloud.</small>
+            </p>
+          </div>
+
+          <div class="download-card">
+            <h3>📦 Mobile Apps</h3>
+            <p class="version">View & manage projects on the go</p>
+            <div class="mobile-links">
+              <a href="#" class="btn btn-secondary" aria-label="Download PLUGIC iOS app">
+                📱 iOS (App Store)
+              </a>
+              <a href="#" class="btn btn-secondary" aria-label="Download PLUGIC Android app">
+                🤖 Android (Play Store)
+              </a>
+            </div>
+            <p class="mobile-note">
+              <small>View projects, collaborate with team, upload designs. Full editing coming soon.</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="installation-guide">
+          <h3>Quick Setup (5 minutes)</h3>
+          <ol>
+            <li><strong>Download</strong> the installer for your platform</li>
+            <li><strong>Run</strong> the installer and follow the prompts</li>
+            <li><strong>Launch</strong> PLUGIC and create your first project</li>
+            <li><strong>Connect</strong> your hardware via USB</li>
+            <li><strong>Build</strong> and deploy your first logic circuit!</li>
+          </ol>
+        </div>
+
+        <footer class="download-footer">
+          <p>
+            <strong>Open Source:</strong> All code is licensed under MIT. <a href="#">View on GitHub</a><br>
+            <strong>License:</strong> Free for personal and educational use. Commercial licenses available.
+          </p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>About PLUGIC</h5>
+        <p>
+          PLUGIC is a free, open-source visual programming platform designed to democratize embedded systems
+          development and make logic programming accessible to everyone.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#what">What is PLUGIC?</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#learn">Learning</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Community</h5>
+        <ul>
+          <li><a href="#">Forum</a></li>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contests</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">License (MIT)</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h5>Subscribe to Updates</h5>
+        <form class="newsletter-form" role="region" aria-label="Newsletter signup">
+          <input type="email" placeholder="Your email" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 PLUGIC. Open Source under MIT License.</p>
+      <p>Made with ❤️ by developers, educators, and makers worldwide</p>
+      <div class="social-links">
+        <a href="#" aria-label="PLUGIC Twitter">Twitter</a> |
+        <a href="#" aria-label="PLUGIC GitHub">GitHub</a> |
+        <a href="#" aria-label="PLUGIC LinkedIn">LinkedIn</a> |
+        <a href="#" aria-label="PLUGIC YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/pluggic.js"></script>
+  <script>
+    // Function to toggle mobile menu (shared by hamburger and mobile button)
+    function toggleMobileMenu() {
+      const menu = document.getElementById('nav-menu');
+      const hamburger = document.querySelector('.hamburger');
+      const mobileBtn = document.querySelector('.mobile-only-btn');
+      menu.classList.toggle('mobile-open');
+      if (hamburger) {
+        hamburger.classList.toggle('mobile-open');
+        hamburger.setAttribute('aria-expanded', menu.classList.contains('mobile-open'));
+      }
+      if (mobileBtn) {
+        mobileBtn.setAttribute('aria-expanded', menu.classList.contains('mobile-open'));
+      }
+    }
+  </script>
+
+</body>
+
+</html>
